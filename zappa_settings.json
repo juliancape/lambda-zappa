@@ -1,0 +1,21 @@
+{
+    "dev": {
+        "app_function": "app.f",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "zappa-ex",
+        "runtime": "python3.10",
+        "s3_bucket": "zappa-ngaorfdgk",
+        "keep_warm": false,
+        "apigateway_enabled": false,
+        "manage_roles": false,
+        "role_name": "LabRole",
+        "events": [
+            {
+                "function": "app.f",
+                "expression": "cron(35 2 * * ? *)"
+            }
+        ]
+
+    }
+}
