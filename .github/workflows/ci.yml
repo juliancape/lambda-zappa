@@ -7,9 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      AWS_DEFAULT_REGION: us-east-1
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -37,6 +35,5 @@ jobs:
 
       - name: Run zappa deploy
         run: |
-          export AWS_PROFILE=default
           zappa deploy dev
           zappa update dev
