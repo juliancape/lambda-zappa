@@ -35,5 +35,4 @@ jobs:
           pip install -r requirements.txt
       - name: Run zappa deploy
         run: |
-          zappa deploy dev
-          zappa update dev
+          zappa deploy dev -s zappa_settings.json
