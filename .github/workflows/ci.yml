@@ -47,4 +47,5 @@ jobs:
           aws-region: us-east-1
       - name: Run zappa deployh
         run: |
+          zappa deploy dev
           zappa update dev
