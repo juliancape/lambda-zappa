@@ -45,5 +45,6 @@ jobs:
           aws-region: us-east-1
       - name: Run zappa deploy
         run: |
+
           zappa deploy dev --aws-profile default
           zappa update dev --aws-profile default
